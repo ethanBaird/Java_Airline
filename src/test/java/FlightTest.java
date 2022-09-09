@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
@@ -34,5 +35,8 @@ public class FlightTest {
 
         flight = new Flight(testPilots, testCabinCrewMembers, testPassengers, plane, "FN123", "GLA", "EDB", "0700");
     }
+
+    @Test
+    
 
 }
