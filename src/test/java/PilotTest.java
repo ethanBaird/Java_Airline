@@ -24,4 +24,10 @@ public class PilotTest {
         String actual = pilot.getLicenseNumber();
         assertEquals("LN100", actual);
     }
+
+    @Test
+    public void canFlyPlane(){
+        String actual = pilot.flyPlane();
+        assertEquals("This is your Captain speaking!", actual);
+    }
 }

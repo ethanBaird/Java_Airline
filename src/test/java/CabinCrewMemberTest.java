@@ -18,4 +18,10 @@ public class CabinCrewMemberTest {
         int actual = rank.getValue();
         assertEquals(3, actual);
     }
+
+    @Test
+    public void canAnnounce(){
+        String actual = cabinCrewMember.announce();
+        assertEquals("Attention everyone!", actual);
+    }
 }
