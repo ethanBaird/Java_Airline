@@ -55,4 +55,10 @@ public class FlightTest {
         assertEquals(0, actual);
     }
 
+    @Test
+    public void hasPlane(){
+        int actual = flight.getPlane().getPlaneType().getValue();
+        assertEquals(1, actual);
+    }
+
 }
