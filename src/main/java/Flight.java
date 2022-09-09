@@ -66,6 +66,7 @@ public class Flight {
     }
 
     public void bookPassenger(Passenger passenger) {
+        passenger.addFlight(this.flightNumber);
         this.passengers.add(passenger);
     }
 }

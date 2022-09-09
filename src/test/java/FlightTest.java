@@ -73,6 +73,7 @@ public class FlightTest {
         assertEquals("EDB", flight.getDepartureAirport());
     }
 
+    @Test
     public void hasDepartureTime(){
         Date actual = flight.getDepartureTime();
         assertEquals(departureTime, actual);
@@ -101,6 +102,7 @@ public class FlightTest {
         flight.bookPassenger(passenger);
         assertEquals(99, flight.getAvailableSeats());
         assertEquals(1, flight.getPassengerCount());
+        assertEquals(flight.getFlightNumber(), passenger.getFlight());
     }
 
 }
