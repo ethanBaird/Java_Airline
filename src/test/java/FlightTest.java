@@ -61,4 +61,12 @@ public class FlightTest {
         assertEquals(1, actual);
     }
 
+    @Test
+    public void hasOtherAttributes(){
+        assertEquals("FN123", flight.getFlightNumber());
+        assertEquals("GLA", flight.getDestination());
+        assertEquals("EDB", flight.getDepartureAirport());
+        assertEquals("0700", flight.getDepartureTime());
+    }
+
 }
