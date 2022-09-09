@@ -69,4 +69,16 @@ public class FlightTest {
         assertEquals("0700", flight.getDepartureTime());
     }
 
+    @Test
+    public void canGetNumberOfAvailableSeatsWhenEmpty(){
+        int actual = flight.getAvailableSeats();
+        assertEquals(100, actual);
+    }
+
+    @Test
+    public void canGetAvailableSeatsAfterPassengerAdded(){
+        testPassengers.add(passenger);
+        assertEquals(99, flight.getAvailableSeats());
+    }
+
 }

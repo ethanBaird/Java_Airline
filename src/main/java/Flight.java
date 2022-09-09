@@ -53,4 +53,10 @@ public class Flight {
     public String getDepartureTime() {
         return departureTime;
     }
+
+    public int getAvailableSeats(){
+        int planeCapacity = this.plane.getCapacity();
+        int passengerCount = this.passengers.size();
+        return planeCapacity - passengerCount;
+    }
 }
