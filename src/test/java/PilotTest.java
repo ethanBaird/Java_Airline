@@ -19,4 +19,9 @@ public class PilotTest {
         assertEquals(1, actual);
     }
 
+    @Test
+    public void hasLicenseNumber(){
+        String actual = pilot.getLicenseNumber();
+        assertEquals("LN100", actual);
+    }
 }
