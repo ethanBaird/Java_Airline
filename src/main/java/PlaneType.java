@@ -23,4 +23,8 @@ public enum PlaneType {
     public int getTotalWeight() {
         return totalWeight;
     }
+
+    public int getTotalBaggageWeight() {
+        return totalWeight / 2;
+    }
 }
