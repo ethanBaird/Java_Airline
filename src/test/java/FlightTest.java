@@ -27,10 +27,10 @@ public class FlightTest {
 
         pilot = new Pilot("Ethan", Rank.CAPTAIN, "LN100");
         cabinCrewMember = new CabinCrewMember("Rachel", Rank.FLIGHTATTENDANT);
+        passenger = new Passenger("Minnie", 2);
 
         testPilots.add(pilot);
         testCabinCrewMembers.add(cabinCrewMember);
-        testPassengers.add(passenger);
 
         plane = new Plane(PlaneType.BOEING747);
 
@@ -49,6 +49,10 @@ public class FlightTest {
         assertEquals(1, actual);
     }
 
-    
+    @Test
+    public void startsWithNoPassengers(){
+        int actual = flight.getPassengers().size();
+        assertEquals(0, actual);
+    }
 
 }
