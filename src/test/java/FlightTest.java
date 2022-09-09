@@ -3,6 +3,8 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static org.junit.Assert.assertEquals;
+
 public class FlightTest {
 
     private ArrayList<Pilot> testPilots;
@@ -25,7 +27,6 @@ public class FlightTest {
 
         pilot = new Pilot("Ethan", Rank.CAPTAIN, "LN100");
         cabinCrewMember = new CabinCrewMember("Rachel", Rank.FLIGHTATTENDANT);
-        passenger = new Passenger("Minnie", 2);
 
         testPilots.add(pilot);
         testCabinCrewMembers.add(cabinCrewMember);
@@ -37,6 +38,17 @@ public class FlightTest {
     }
 
     @Test
+    public void hasPilot(){
+        int actual = flight.getPilots().size();
+        assertEquals(1, actual);
+    }
+
+    @Test
+    public void hasCabinCrewMembers(){
+        int actual = flight.getCabinCrewMembers().size();
+        assertEquals(1, actual);
+    }
+
     
 
 }
