@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -70,6 +71,12 @@ public class FlightTest {
     }
 
     @Test
+    public void canGetPassengerCount(){
+        testPassengers.add(passenger);
+        assertEquals(1, flight.getPassengerCount());
+    }
+
+    @Test
     public void canGetNumberOfAvailableSeatsWhenEmpty(){
         int actual = flight.getAvailableSeats();
         assertEquals(100, actual);
@@ -79,6 +86,13 @@ public class FlightTest {
     public void canGetAvailableSeatsAfterPassengerAdded(){
         testPassengers.add(passenger);
         assertEquals(99, flight.getAvailableSeats());
+    }
+
+    @Test
+    public void canBookPassenger(){
+        flight.bookPassenger(passenger);
+        assertEquals(99, flight.getAvailableSeats());
+        assertEquals(1, flight.getPassengerCount());
     }
 
 }

@@ -59,4 +59,12 @@ public class Flight {
         int passengerCount = this.passengers.size();
         return planeCapacity - passengerCount;
     }
+
+    public int getPassengerCount() {
+        return this.passengers.size();
+    }
+
+    public void bookPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
+    }
 }
